@@ -1,0 +1,570 @@
+/* Plus Jakarta Sans */
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("fonts/PlusJakartaSans-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Poppins */
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+    list-style: none;
+}
+
+/**
+  Упрощаем работу с изображениями
+ */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.about, .project-container, .experience-section, .contact-section {
+    scroll-margin-top: 90px;
+}
+
+:root {
+    --secondary-text: #c5c5c5;
+    --blue-gradient: #5badff;
+    --secondary-color: #8491a0;
+    --primary-color: #fff;
+    --card-color: #2a2a2a;
+    --background-color: #161513;
+    --font-family: "Poppins", sans-serif;
+    --second-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+body {
+    font-family: Poppins,sans-serif;
+    font-weight: 400;
+    background-color: var(--background-color);
+    color: var(--secondary-text);
+    line-height: 1.5;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82px;
+    padding: 1rem 2rem;
+    background-color: var(--card-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+.header-logo img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+
+.header-logo {
+    margin-right: 256px;
+
+}
+
+.header-menu-list {
+    display: flex;
+    gap: 71px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header-menu-link {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    position: relative;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.header-menu-link:hover {
+    color: var(--blue-gradient);
+}
+
+.about{
+    margin-top: 96px;
+    justify-items: center;
+
+}
+.title{
+
+    margin-top: 41px;
+    max-width:670px;
+    width: 100%;
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 115%;
+    text-align: center;
+    background: linear-gradient(90deg, #ff8660 0%, #9a33ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-me{
+    margin-top: 39px;
+    max-width:670px;
+    width: 100%;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--secondary-text);
+}
+.action-button{
+    margin-top: 54px;
+}
+.action-button button{
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    width: 195px;
+    height: 64px;
+}
+
+.action-button1 {
+    background-color: var(--primary-color);
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--background-color);
+}
+
+.action-button2 {
+    margin-left: 18px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--primary-color);
+}
+
+.action-button button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.experience-with{
+    justify-content: center;
+    justify-items: center;
+    margin-top: 88px;
+}
+.experience-text{
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.12em;
+    color: var(--secondary-text);
+}
+
+.experience-items{
+    margin-top: 48px;
+}
+
+
+.experience{
+    margin-top: 99px;
+    justify-content: center;
+    text-align: center;
+}
+h2{
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 102%;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #5badff 0%, #1373d1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.project-container {
+    margin-top: 99px    ;
+    text-align: center;
+    align-items: center;
+}
+
+
+.projects {
+    justify-content: center;
+    margin-top: 27px;
+    align-content: center;
+    display: flex;
+    gap: 30px;
+}
+
+.project-container h2{
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 102%;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #ff8660 0%, #d5491d 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 390px;
+    text-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+
+.card-content {
+    text-transform: uppercase;
+    place-content: center start;
+    line-height: 1.2%;
+    height: 60px;
+    background: var(--card-color);
+    padding: 0 20px;
+    color: white;
+}
+
+.card-content p {
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+
+}
+.card-content h3 {
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    font-size: 19px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+
+
+
+
+.experience-section {
+    max-width: 810px;
+    margin: 96px auto;
+    padding: 0 20px;
+}
+
+.experience-section h2 {
+    font-family: Poppins,sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 102%;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #5badff 0%, #1373d1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.experience-item {
+    margin-bottom: 40px;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.experience-item p {
+    font-family: Poppins,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--secondary-color);
+}
+
+.company-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.company-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.position-info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.experience-item h3 {
+    font-family: Poppins,sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    text-align: left;
+    color: var(--primary-color);
+    margin: 0;
+    max-width: 70%;
+}
+
+.date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    white-space: nowrap;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+@media (max-width: 768px) {
+    .experience-section {
+        margin: 60px auto;
+        padding: 0 15px;
+    }
+
+    .experience-section h2 {
+        font-size: 28px;
+        text-align: left;
+        line-height: 1.1;
+        margin-bottom: 30px;
+    }
+
+    .experience-item {
+        margin-bottom: 30px;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .company-header {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .company-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .position-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .experience-item h3 {
+        font-size: 18px;
+        max-width: 100%;
+        line-height: 1.3;
+    }
+
+    .date {
+        font-size: 12px;
+        margin-left: 0;
+        white-space: normal;
+        color: var(--secondary-text);
+    }
+
+    .experience-item p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .experience-section h2 {
+        font-size: 24px;
+    }
+
+    .experience-item h3 {
+        font-size: 16px;
+    }
+
+    .date {
+        font-size: 11px;
+    }
+
+    .experience-item p {
+        font-size: 12px;
+    }
+}
+
+
+
+.contact-section {
+    margin-top: auto;
+    background: var(--card-color);
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.contact-container {
+    max-width: 670px;
+    margin: 0 auto;
+}
+
+.contact-heading {
+    font-family: Poppins,sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    letter-spacing: 0.02em;
+    color: white;
+    margin-bottom: 34px;
+}
+
+.experience-summary {
+    font-family: Poppins,sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text);
+    margin-bottom: 22px;
+    line-height: 1.7;
+}
+
+
+.email-wrapper {
+    text-align: start;
+}
+
+.email-address {
+    color: var(--secondary-text);
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 50px 15px;
+        margin: 60px 0 40px;
+    }
+
+    .contact-heading {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
+    .experience-summary {
+        margin-bottom: 25px;
+        font-size: 13px;
+    }
+
+    .email-block {
+        padding: 10px 20px;
+        margin: 15px 0;
+    }
+
+    .email-wrapper {
+        margin: 20px 0;
+    }
+}
+
