@@ -127,6 +127,7 @@ body {
     line-height: 1.5;
     min-height: 100vh;
     margin: 0;
+    align-items: center;
 }
 
 .header {
@@ -240,6 +241,47 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+@media (max-width: 768px) {
+    .about {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .about-me {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .action-button {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .action-button button {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+@media (max-width: 768px) {
+    .experience-with {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    .experience-text {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .experience-items {
+        margin-top: 30px;
+    }
+}
 
 
 .experience-with{
