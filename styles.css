@@ -245,22 +245,20 @@ body {
 
 @media (max-width: 768px) {
     .about {
-        margin-top: 50px;
-        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .title {
-        font-size: 32px;
-        line-height: 1.2;
-    }
-
-    .about-me {
-        font-size: 16px;
-        line-height: 1.5;
+    .title, .about-me {
+        text-align: center;
     }
 
     .action-button {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
@@ -271,20 +269,21 @@ body {
 }
 @media (max-width: 768px) {
     .experience-with {
-        margin-top: 50px;
-        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .experience-text {
-        font-size: 18px;
-        line-height: 1.5;
+        text-align: center;
     }
 
     .experience-items {
-        margin-top: 30px;
+        display: flex;
+        justify-content: center;
     }
 }
-
 
 .experience-with{
     justify-content: center;
@@ -613,3 +612,24 @@ h2{
     }
 }
 
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .header-logo {
+        margin-right: 0;
+    }
+
+    .header-menu-list {
+        justify-content: center;
+        gap: 20px;
+    }
+}
